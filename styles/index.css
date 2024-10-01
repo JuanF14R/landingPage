@@ -1,0 +1,222 @@
+/* Se llaman a las clases con un . y luego el nombre de la clase EXACTAMENTE IGUAL a como la pusieron en HTML */
+
+/* .container-navBar */
+
+/* Se llaman a los i con un # y luego el nombre de la identidad EXACTAMENTE IGUAL a como lo pusieron en HTML */
+/* #Logo */
+
+/* nav{ La etiqueta se pone sin nada antes */
+
+/* _______________________________________________________ */
+
+/* Selector universal *
+    Me afecta a TODAS Y CADA UNA DE LAS ETIQUETAS DE MI HTML
+    
+    ojo, no es correcto dar etilos con el selector universal
+    */
+
+/* ............................ */
+
+/* Condiciones iniciales - estilos generales
+    1- Selector universal
+    2- Variables
+    3- Atributos en la etiqueta Body
+     */
+
+* {
+   margin: 0;
+   padding: 0;
+}
+
+
+/* Variables en css */
+/* root -> al archivo raiz -> arhivo html. Estas diciendo que todas las variables declaradas en root pueden ser usadas para todo el proyecto. 
+     - Paleta de colores
+     - Tipografias
+     - Tamaños o medidas usadas frecuentemente */
+
+:root {
+   /* declarar la variable */
+   --primaryColor: #ECF9FF;
+   --backgroundColor: #1B2B40;
+   --textColor: #41F2F2;
+   --tripography: 'Impact', sans-serif;
+}
+
+body {
+   /* primero, dimensiones. 
+        ancho */
+   /* 100vw -> ancho de la pantalla total */
+   width: 100vw;
+   /* Alto */
+   height: auto;
+   /* Caracteristica que permita que se respeten las dimensiones */
+   box-sizing: border-box;
+   /* Color de fondo */
+   background-color: var(--backgroundColor);
+   font-family: var(--tripography);
+   /* Propiedad para gestionar scroll - seleccionar eje x. */
+   overflow-x: hidden;
+}
+
+/* -------------------------------- */
+
+
+/* ------------HEADER-------------- */
+
+header {
+   /* Atributo para poner bordes */
+   
+   width: 100vw;
+   height: 100vh;
+}
+
+
+/* menu de navegación */
+.container-navBar {
+   
+   width: 100vw;
+   height: 60px;
+   background-color: var(--primaryColor);
+}
+
+.navBar-list {
+   width: 100%;
+   height: 100%;
+   /* Flexbox 
+        display es como vemos el contenido
+        flex es visualizarlo de forma flexible -> CAJA FLEXIBLE, LAS PROPIEDADES DE FLEX SE USAN EN EL PADRE
+        */
+   /* DISPLAY FLEX POR DEFECTO ME PONE LOS ELEMENTO UNO AL LADO DEL OTRO */
+   display: flex;
+   /* CENTRAR ELEMENTOS DEL MENU */
+   justify-content: center;
+   align-items: center;
+   /* Vamos a quitar los puntos de la lista (el estilo de la lista */
+   list-style: none;
+   /* Vamos a separ entre si los elementos */
+   gap: 90px;
+}
+
+#Logo {
+   height: 65px;
+}
+
+/* Baner */
+.Container-banner {
+
+   width: 100vw;
+   height: calc(100vh - 60px);
+   /* position para modificar la posición */
+   position: relative;
+}
+
+/* Clase de padre contenedor + espacio + etiqueta hija */
+
+.Container-banner img {
+   width: 100%;
+   height: 100%;
+}
+
+
+.btn {
+   background-color: var(--primaryColor);
+
+
+   /* un valor de padding, alargar y hacer ancho el boton. ese valor se pone arriba, abajo, derecha izquierda. Si pongo dos valores, el primero es arriba y abajo y el segundo es derecha e izquierda */
+   padding: 10px 60px;
+   /* Darle redondeo al elemento */
+   border-radius: 10px;
+   /* Para mover el elemento como queramos, poition relative en padre, absolute en hijo */
+   position: absolute;
+   /* bottom hace referencia a la distancia desde la parte de abajo y left distancia desde la izquierda */
+   bottom: 20%;
+   left: 20%;
+   cursor: pointer;
+}
+
+/* pseudo clase -> nos extiende funcionalidades de estilo  nuestras clases */
+/* Acción de pasar el mouse por encima */
+.btn:hover {
+   background-color: var(--textColor);
+   color: var(--backgroundColor);
+}
+
+/*------------ MAIN---------------- */
+
+.contentSection {
+   
+   width: 80vw;
+   /* Centrar contenedor - Primer valor arriba abajo. y segundo valor derecha izquierda. Arriba - izquierda - abajo - derecha */
+   margin: 100px auto;
+}
+
+.title {
+   color: var(--primaryColor);
+   /* Tamaño de fuente */
+   font-size: 50px;
+   /* centrar texto */
+   text-align: center;
+   /* margen de abajo */
+   margin-bottom: 40px;
+}
+
+.container {
+   /* El tamaño va a ser en relación al tamaño del padre */
+   width: 100%;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   gap: 40px;
+}
+
+.container img{
+   width: 30%;
+   border-radius: 60px;
+}
+.container p{
+   width: 70%;
+   color: var(--textColor);
+   font-size: 40px;
+   /* Alíneación del texto */
+   text-align: justify;
+   font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+   /* Distancia entre renglones */
+   line-height: 70px;
+   letter-spacing: 5px;
+}
+.contentSection iframe {
+   width: 30%;
+   height: 300px;
+   border-radius: 30px;
+}
+
+/* Inicio de galeria de imagenes */
+
+.gallery {
+   
+   /* Organización del contenido en cuadriculas */
+   display: grid;
+   /* Cuantas filas van a haber */
+   grid-template-rows: 1fr 1fr;
+   /* Cuantas columnas van a haber */
+   grid-template-columns: 1fr 1fr 1fr;
+   gap: 40px;
+   margin: 100px;
+   padding: 100px;
+}
+
+.gallery img {
+   width: 100%;
+   border-radius: 30px;
+}
+/* -----------FOOTER-------------- */
+footer{
+   
+   background-color: var(--primaryColor);
+   padding: 40px;
+   text-align: center;
+   font-size: 30px;
+   margin-top: 100px;
+
+}

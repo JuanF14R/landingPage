@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Link de vinculación con los estilos de mi pagina -->
+    <link rel="stylesheet" href="./styles/index.css">
+    <!-- Link de vinulaión de logo de las pestaña favicon -->
+    <link rel="shortcut icon" href="./assets/LOGO.jpg" type="image/x-icon">
+    <title>DEF | DEsing</title>
+
+
+</head>
+
+<body>
+
+    <header>
+        <!-- Encabzado de nuestro sitio web: menu de navegación, gancho para el usuario -->
+
+        <!-- Inicio menú de navegación -->
+        <nav class="container-navBar">
+            <ul class="navBar-list">
+                <li>Inicio</li>
+                <li>Quiénes somos</li>
+                <li><img id="Logo" src="./assets/LOGO.jpg" alt="Logo-programación"></li>
+                <li>Lo que hacemos</li>
+                <li>Galería de imágenes</li>
+            </ul>
+        </nav>
+        <!-- Fin menú de navegación -->
+
+        <!-- Inicio Banner -->
+        <figure class="Container-banner">
+            <img src="./assets/BANNER.jpg" alt="Imagen-de-programación">
+            <button class="btn">CONOCER MÁS</button>
+        </figure>
+        <!-- Fin Banner -->
+    </header>
+
+    <main>
+        <!-- Contenido del sitio web - separado por secciones -->
+        <!-- Inicio sección quienes somos -->
+        <section class="contentSection">
+            <h2 class="title">Conoce quiénes somos</h2>
+            <article class="container">
+                <img src="./assets/FOTO1.jpg" alt="El-arte-de-la-programación">
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam nulla optio nostrum est sit omnis
+                    nobis aut a quisquam ratione suscipit perferendis enim dicta porro tempore commodi, eligendi velit
+                    officia.</p>
+            </article>
+        </section>
+        <!-- Inicio sección lo que hacemos -->
+        <section class="contentSection">
+            <h2 class="title">Conoce lo que hacemos</h2>
+            <article class="container">
+                <p>
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Cumque iusto nulla doloribus velit
+                    ratione! Amet, fuga itaque dolorem cum recusandae voluptatibus? Quam rem ratione magnam a. Iure ab
+                    tenetur iusto.
+                </p>
+                <!-- Vinculción de videos desde link. CONTENIDO EMBEBIDO -> Darle compartir, opción de insertar, aplica para maps, videos, etc -->
+                <!-- Para videos descargados. etiqueta: Video y vincular video y se le agrega el atributo controls y autoplay -->
+
+                <iframe src="https://www.youtube.com/embed/0EO6Cmf5EXI?si=FHNJg3woaEqt-1nw" title="YouTube video player"
+                    frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            </article>
+        </section>
+        <!-- Inicio sección galeria -->
+        <section>
+            <!-- figure es el contenedor de contenido audiovisual -->
+            <figure class="gallery">
+                <img src="./assets/FOTO1.jpg" alt="programación">
+                <img src="./assets/FOTO1.jpg" alt="programación">
+                <img src="./assets/FOTO1.jpg" alt="programación">
+                <img src="./assets/FOTO1.jpg" alt="programación">
+                <img src="./assets/FOTO1.jpg" alt="programación">
+                <img src="./assets/FOTO1.jpg" alt="programación">
+            </figure>
+        </section>
+    </main>
+
+    <footer>
+        <!--Pie de pagina, información de contacto, e derechos de autor -->
+        <p>
+            Proyecto realizado por &copy; Juan Felipe Rodriguez Pinzon 2024
+        </p>
+        <p>
+            Bootcamp de desarrollo web | Fundamentos de programación
+        </p>
+    </footer>
+
+</body>
+
+</html>
